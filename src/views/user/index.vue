@@ -1,5 +1,5 @@
 <template>
     <div>
-        我是登录页面
+        我是用户页面
     </div>
 </template>
