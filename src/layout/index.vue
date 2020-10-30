@@ -4,7 +4,7 @@
       <div class="logo" />
       <a-menu theme="dark" mode="inline" v-model:selectedKeys="selectedKeys">
         <a-menu-item key="1">
-          <user-outlined />
+          <UserOutlined />
           <router-link to="/home" class="router-item">
            <span>首页</span>
           </router-link>
@@ -59,13 +59,13 @@ import {
 import { onMounted,provide,reactive,ref } from 'vue'
 export default {
     name:'home',
-     components: {
-    UserOutlined,
-    AliwangwangOutlined,
-    FundProjectionScreenOutlined,
-    MenuUnfoldOutlined,
-    MenuFoldOutlined,
-  },
+    components: {
+      UserOutlined,
+      AliwangwangOutlined,
+      FundProjectionScreenOutlined,
+      MenuUnfoldOutlined,
+      MenuFoldOutlined,
+    },
     data(){
         return {
             selectedKeys: ['1'],

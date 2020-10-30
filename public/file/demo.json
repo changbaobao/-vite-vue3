@@ -1,0 +1,9 @@
+{
+    "code": 200,
+    "data": {
+        "name": "叶叶",
+        "userId": 1,
+        "password": 12345,
+        "imgUrl": ""
+    }
+}
