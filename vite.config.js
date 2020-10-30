@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
     // 引入第三方的配置
     optimizeDeps: {
-        include: ["axios", "sass"]
+        include: ["axios"]
     },
     outputDir: 'dist',
     assetsDir: 'static',

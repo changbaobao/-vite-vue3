@@ -4,18 +4,21 @@
       <div class="logo" />
       <a-menu theme="dark" mode="inline" v-model:selectedKeys="selectedKeys">
         <a-menu-item key="1">
-          <router-link to="/home">
+          <user-outlined />
+          <router-link to="/home" class="router-item">
            <span>首页</span>
           </router-link>
           
         </a-menu-item>
         <a-menu-item key="2">
-          <router-link to="/user">
+          <AliwangwangOutlined />
+          <router-link to="/user" class="router-item">
            <span>用户</span>
           </router-link>
         </a-menu-item>
         <a-menu-item key="3">
-          <router-link to="/company">
+          <FundProjectionScreenOutlined />
+          <router-link to="/company" class="router-item">
            <span>公司</span>
           </router-link>
         </a-menu-item>
@@ -23,9 +26,17 @@
     </a-layout-sider>
     <a-layout>
       <a-layout-header style="background: #fff; padding: 0">
+        <menu-unfold-outlined
+          v-if="collapsed"
+          class="trigger"
+          @click="() => (collapsed = !collapsed)"
+        />
+        <menu-fold-outlined v-else class="trigger" @click="() => (collapsed = !collapsed)" />
         <div class="right-nav-item">
-           <a-avatar shape="square" icon=""/></a-badge>
-           超级管理员
+           <a-avatar shape="square" icon="">
+             <UserOutlined />
+           </a-avatar>
+           <span style="margin-left:10px;">超级管理员</span>
         </div>
         
       </a-layout-header>
@@ -38,13 +49,23 @@
   </a-layout>
 </template>
 <script>
-// import { MessageOutlined } from '@ant-design/icons-vue'
+import {
+  UserOutlined,
+  AliwangwangOutlined,
+  FundProjectionScreenOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+} from '@ant-design/icons-vue';
 import { onMounted,provide,reactive,ref } from 'vue'
 export default {
     name:'home',
      components: {
-    //   MessageOutlined
-    },
+    UserOutlined,
+    AliwangwangOutlined,
+    FundProjectionScreenOutlined,
+    MenuUnfoldOutlined,
+    MenuFoldOutlined,
+  },
     data(){
         return {
             selectedKeys: ['1'],
@@ -84,6 +105,10 @@ export default {
 .right-nav-item {
   float: right;
   margin-right:30px;
+}
+.router-item {
+  display: inline-block;
+  color: aliceblue
 }
 
 </style>
